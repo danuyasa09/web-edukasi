@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ResepRumahan.id</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff8f0;
+    }
+    header {
+      background-color: #ff8c42;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 1rem;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      text-align: center;
+      padding: 2rem;
+      background-color: #ffe3c9;
+    }
+    .hero h1 {
+      margin-bottom: 1rem;
+    }
+    .recipes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+    }
+    .card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.02);
+    }
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 1rem;
+    }
+    footer {
+      background-color: #ff8c42;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ResepRumahan.id</h1>
+    <nav>
+      <a href="#">Beranda</a>
+      <a href="#">Resep</a>
+      <a href="#">Kategori</a>
+      <a href="#">Tentang</a>
+      <a href="#">Kontak</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Selamat Datang di ResepRumahan.id!</h1>
+    <p>Kumpulan resep rumahan yang mudah dan enak untuk sehari-hari.</p>
+  </section>
+
+  <section class="recipes">
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?fried-rice" alt="Nasi Goreng">
+      <div class="card-content">
+        <h3>Nasi Goreng Spesial</h3>
+        <p>Resep praktis dan lezat dengan bumbu sederhana.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?soup" alt="Sup Ayam">
+      <div class="card-content">
+        <h3>Sup Ayam Sehat</h3>
+        <p>Hangat dan menyehatkan, cocok untuk musim hujan.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?dessert" alt="Puding Coklat">
+      <div class="card-content">
+        <h3>Puding Coklat Lumer</h3>
+        <p>Manis, lembut, dan cocok untuk pencuci mulut.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 ResepRumahan.id | Dibuat oleh Danu
+  </footer>
+</body>
+</html>

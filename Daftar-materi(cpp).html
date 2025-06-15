@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daftar Materi HTML</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+
+  html {
+    scroll-behavior: smooth;   /* semua anchor link akan scroll halus */
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f9fc;
+    color: #333;
+  }
+
+  header {
+    background: linear-gradient(45deg, rgba(32, 141, 224, 0.486), rgba(249, 249, 247, 0.437));
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.481);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .main-layout {
+    display: flex;
+    margin-top: 90px; /* beri ruang agar tidak tertutup header */
+  }
+
+  /* Sidebar */
+  .sidebar {
+    width: 220px;
+    background: linear-gradient(45deg, rgba(78, 181, 212, 0.464), rgba(241, 241, 238, 0.437));
+    color: white;
+    height: calc(100vh - 90px);
+    position: fixed;
+    top: 90px;
+    left: 0;
+    padding-top: 30px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.289);
+    padding-left: 10px;
+    overflow-y: auto;
+  }
+
+  .sidebar a {
+    display: flex;
+    justify-content: center;
+    background: rgba(229, 237, 243, 0.437);
+    width: 190px;
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.552);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 20px;
+    color: black;
+    text-decoration: none;
+  }
+
+  .sidebar a:hover {
+    background: #4A90E2;
+    color: white;
+    transform: scale(1.08);
+    transition: 0.3s ease;
+  }
+
+  .back-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    background-color: #4A90E2;
+    transition: background-color 0.3s ease;
+    max-width: fit-content;
+  }
+
+  .back-button:hover {
+    background-color: #357ABD;
+  }
+
+  .back-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Konten */
+  .content {
+    margin-top: 80px;
+    margin-left: 240px;  /* Lebih lebar dari sidebar supaya tidak tertutup */
+    padding: 40px;
+    max-width: calc(100% - 240px);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-box {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 30px;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 800px;
+  }
+
+  h1, h2 {
+    color: #2c3e50;
+  }
+
+  pre {
+    background-color: #eef1f6;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+  }
+
+  code {
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h2>Daftar Materi C++</h2>
+  </header>
+
+  <div class="sidebar">
+    <a href="#pengantar">Pendahuluan</a>
+    <a href="#struktur">Struktur</a>
+    <a href="#tipedata">Tipe Data dan Variabel</a>
+    <a href="#operator">Operator</a>
+    <a href="#percabangan">Percabangan</a>
+
+    <div class="sidebar-footer" style="margin-top: 20px;">
+      <a href="fix-projek.html" class="back-button">
+        <img src="back-button.png" alt="kembali" class="back-icon">
+        <span>Kembali ke Halaman Utama</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="content">
+    <!--pengantar-->
+    <div class="section-box" id="pengantar">
+      <h2>1. Apa itu C++?</h2>
+      <p>C++ adalah bahasa pemrograman yang dikembangkan oleh Bjarne Stroustrup sebagai pengembangan dari bahasa C. C++ dikenal sebagai bahasa yang powerful karena mendukung pemrograman prosedural dan berorientasi objek (OOP).</p>
+
+      <h3>Kenapa belajar C++?</h3>
+      <ul>
+        <li>Digunakan secara luas di dunia industri dan akademik</li>
+        <li>Performa tinggi dan efisien</li>
+        <li>Fondasi yang kuat untuk belajar bahasa lain seperti Java dan C#</li>
+        <li>Memahami konsep dasar komputer dan pemrograman</li>
+      </ul>
+
+      <h3>Struktur Dasar Program C++</h3>
+      <p>Berikut contoh program C++ sederhana:</p>
+      <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "Halo Dunia!" &lt;&lt; endl;
+    return 0;
+}
+      </code></pre>
+
+      <h3>Penjelasan:</h3>
+      <ul>
+        <li><code>#include &lt;iostream&gt;</code> adalah library standar untuk input/output</li>
+        <li><code>using namespace std;</code> agar tidak perlu menulis <code>std::</code> sebelum <code>cout</code></li>
+        <li><code>main()</code> adalah fungsi utama yang dijalankan pertama kali</li>
+        <li><code>cout</code> digunakan untuk mencetak ke layar</li>
+      </ul>
+    </div>
+
+    <!--struktur-->   
+    <div class="section-box" id="struktur">
+      <h2>2. Struktur Dasar Program C++</h2>
+      <p>Program C++ terdiri dari beberapa bagian utama seperti berikut:</p>
+
+      <ol>
+        <li><strong>Preprocessor Directive</strong> → Baris yang diawali dengan tanda <code>#</code> seperti <code>#include</code>.</li>
+        <li><strong>Fungsi utama</strong> → <code>main()</code> adalah titik awal eksekusi program.</li>
+        <li><strong>Statement</strong> → Baris instruksi yang diakhiri dengan titik koma (<code>;</code>).</li>
+        <li><strong>Komentar</strong> → Digunakan untuk memberi catatan dalam kode.</li>
+      </ol>
+
+      <h3>Contoh Struktur Lengkap:</h3>
+      <pre><code>#include &lt;iostream&gt; // Library input-output
+using namespace std;
+
+int main() {
+    // Menampilkan teks ke layar
+    cout &lt;&lt; "Halo Dunia!" &lt;&lt; endl;
+    return 0;
+}
+      </code></pre>
+
+      <h3>Penjelasan Tambahan:</h3>
+      <ul>
+        <li><code>#include &lt;iostream&gt;</code> : Mengimpor library standar untuk input dan output.</li>
+        <li><code>using namespace std;</code> : Menghindari penulisan "std::" setiap kali pakai <code>cout</code>.</li>
+        <li><code>int main()</code> : Fungsi utama yang akan dijalankan pertama kali.</li>
+        <li><code>cout &lt;&lt; "Halo Dunia!"</code> : Menampilkan teks ke layar.</li>
+        <li><code>return 0;</code> : Mengembalikan nilai 0 untuk menandakan program selesai tanpa error.</li>
+      </ul>
+
+    </div>
+
+    <!--tipe data-->   
+    <div class="section-box" id="tipedata">
+      <h2>3. Tipe Data di C++</h2>
+      <p>Tipe data adalah jenis data yang bisa disimpan dan diproses oleh program. Di C++, tipe data utama dibagi menjadi beberapa kategori:</p>
+
+      <h3>1. INT</h3>
+      <p>Digunakan untuk menyimpan bilangan bulat</p>
+
+      <pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+  int umur = 18;
+  cout &lt;&lt; "Umur saya: " &lt;&lt; umur &lt;&lt; " tahun" &lt;&lt; endl;
+  return 0;
+}
+      </code></pre>
+
+      <h3>2. FLOAT</h3>
+      <p>Untuk menyimpan bilangan pecahan (desimal)</p>
+
+      <pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+  float suhu = 36.5;
+  cout &lt;&lt; "Suhu tubuh: " &lt;&lt; suhu &lt;&lt; " derajat" &lt;&lt; endl;
+  return 0;
+}
+      </code></pre>
+
+      <h3>3. CHAR</h3>
+      <p>Menyimpan satu karakter</p>
+
+      <pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+  char nama = 'd';
+  cout &lt;&lt; "Nama awal: " &lt;&lt; nama &lt;&lt; endl;
+  return 0;
+}
+      </code></pre>
+
+      <p>Pastikan karakter ditulis dengan tanda petik tunggal (')</p>
+    </div>
+
+    <!--operator-->   
+    <div class="section-box" id="operator">
+      <h2>4. Operator di C++</h2>
+      <p>Operator adalah simbol yang digunakan untuk melakukan operasi pada variabel dan nilai. Contoh operator:</p>
+
+      <ul>
+        <li>Operator Aritmatika: +, -, *, /, %</li>
+        <li>Operator Relasional: ==, !=, &lt;, &gt;, &lt;=, &gt;=</li>
+        <li>Operator Logika: &&, ||, !</li>
+        <li>Operator Penugasan: =, +=, -=, *=, /=</li>
+      </ul>
+
+      <h3>Contoh Penggunaan:</h3>
+
+      <pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+  int a = 10;
+  int b = 5;
+  cout &lt;&lt; "a + b = " &lt;&lt; a + b &lt;&lt; endl;
+  cout &lt;&lt; "a > b? " &lt;&lt; (a > b) &lt;&lt; endl;
+  return 0;
+}
+      </code></pre>
+    </div>
+
+    <!--percabangan-->   
+    <div class="section-box" id="percabangan">
+      <h2>5. Percabangan (if-else)</h2>
+      <p>Percabangan digunakan untuk membuat keputusan berdasarkan kondisi.</p>
+
+      <pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+  int nilai = 70;
+  if (nilai &gt;= 60) {
+    cout &lt;&lt; "Lulus" &lt;&lt; endl;
+  } else {
+    cout &lt;&lt; "Tidak Lulus" &lt;&lt; endl;
+  }
+  return 0;
+}
+      </code></pre>
+    </div>
+
+  </div>
+
+</body>
+</html>

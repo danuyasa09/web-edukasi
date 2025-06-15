@@ -1,0 +1,69 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #F4F7FA;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.explore {
+  color: teal;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.judul {
+  font-size: 28px;
+  margin: 0;
+  color: #2C3E50;
+}
+
+.deskripsi {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.card {
+  display: flex;
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+  align-items: flex-start;
+}
+
+.icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  background-color: #f0f0f0;
+  padding: 8px;
+  border-radius: 12px;
+  margin-right: 16px;
+}
+
+.content h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.content p {
+  font-size: 14px;
+  color: #555;
+  margin: 6px 0 10px;
+}
+
+.meta {
+  font-size: 13px;
+  color: #777;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}

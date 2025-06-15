@@ -1,0 +1,181 @@
+html {
+ scroll-behavior: smooth;
+}
+body {
+  background-color: black;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(45deg, rgba(0, 80, 219, 0.6), rgba(0, 0, 0, 0.415));
+  color: white;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 0 0 12px 12px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  margin-top: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  position: relative;
+  padding: 8px 12px;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0%;
+  background-color: white;
+  transition: 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+  background-color: #2fc1ff;
+}
+
+ #webEdukasi{
+  background-image: url('_JSON\ Guide_\ Web\ Dev\ Essentials_.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+ #materi {
+  background-image: url('ChatGPT\ Image\ Jun\ 14\,\ 2025\,\ 07_52_22\ PM.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ }
+
+ #contact {
+  background-image: url('download (1).jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ }
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.423);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  color: white;
+}
+
+.banner {
+  width: 350px;
+  height: 350px;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.judul {
+  font-size: 32px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.deskripsi, .ayo {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.card {
+  display: flex;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  align-items: flex-start;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  background-color: #fff;
+  padding: 8px;
+  border-radius: 12px;
+  margin-right: 16px;
+}
+
+.content h2 {
+  margin: 0;
+  font-size: 20px;
+  color: white;
+}
+
+.content p {
+  font-size: 16px;
+  color: white;
+  margin-top: 6px;
+}
+
+.foto img {
+  width: 120px;
+  border-radius: 50%;
+  margin: 20px auto;
+  display: block;
+  box-shadow: 0 0 12px rgba(0,0,0,0.2);
+}
+
+.logo-box {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.logo-box img {
+  width: 40px;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.logo-box img:hover {
+  transform: scale(1.2);
+}
+
+.kotak {
+  margin-top: 20px;
+  color: black;
+  padding: 15px;
+  background-color:rgba(255, 255, 255, 0.411);
+  border-left: 5px solid #2209e6;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: #e3e3e3;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 50px;
+  font-weight: bold;
+}

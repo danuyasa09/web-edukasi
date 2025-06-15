@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daftar Materi HTML</title>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+
+  html {
+    scroll-behavior: smooth;   /* semua anchor link akan scroll halus */
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f9fc;
+    color: #333;
+  }
+
+  header {
+    background: linear-gradient(45deg, rgba(73, 49, 255, 0.464), rgba(252, 252, 249, 0.437));
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.481);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .main-layout {
+    display: flex;
+    margin-top: 90px; /* beri ruang agar tidak tertutup header */
+  }
+
+  /* Sidebar */
+  .sidebar {
+    width: 220px;
+    background: linear-gradient(45deg, rgba(22, 41, 255, 0.464), rgba(241, 241, 238, 0.437));
+    color: white;
+    height: calc(100vh - 90px);
+    position: fixed;
+    top: 90px;
+    left: 0;
+    padding-top: 30px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.289);
+    padding-left: 10px;
+    overflow-y: auto;
+  }
+
+  .sidebar a {
+    display: flex;
+    justify-content: center;
+    background: rgba(229, 237, 243, 0.437);
+    width: 190px;
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.552);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 20px;
+    color: black;
+    text-decoration: none;
+  }
+
+  .sidebar a:hover {
+    background: #4A90E2;
+    color: white;
+    transform: scale(1.08);
+    transition: 0.3s ease;
+  }
+
+  .back-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    background-color: #4A90E2;
+    transition: background-color 0.3s ease;
+    max-width: fit-content;
+  }
+
+  .back-button:hover {
+    background-color: #357ABD;
+  }
+
+  .back-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Konten */
+  .content {
+    margin-top: 80px;
+    margin-left: 240px;  /* Lebih lebar dari sidebar supaya tidak tertutup */
+    padding: 40px;
+    max-width: calc(100% - 240px);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-box {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 30px;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 800px;
+  }
+
+  h1, h2 {
+    color: #2c3e50;
+  }
+
+  pre {
+    background-color: #eef1f6;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+  }
+
+  code {
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h2>Daftar Materi C</h2>
+  </header>
+
+  <div class="sidebar">
+    <a href="#pengantar">Pendahuluan</a>
+    <a href="#struktur">struktur</a>
+    <a href="#tipedata">tipe data dan variabel</a>
+    <a href="#operator">operator</a>
+    <a href="#percabangan">percabangan</a>
+
+     <div class="sidebar-footer" style="margin-top: 20px;">
+      <a href="Materi.html" class="back-button">
+        <img src="back-button.png" alt="kembali" class="back-icon">
+        <span>Kembali ke Halaman Utama</span>
+      </a>
+    </div>
+  </div>
+
+<!--pendahuluan-->
+  <div class="content">
+    <div class="section-box" id="pengantar">
+    <h2>Apa itu C ?</h2>
+    <p>C adalah bahasa pemrograman tingkat menengah, digunakan untuk membuat sistem operasi, compiler, dan embedded system. Bahasa C juga menjadi dasar dari banyak bahasa lain(C++, Java, dll)</p>
+
+    <h3>Kenapa belajar C?</h3>
+    <ul>
+      <li>Efisien </li>
+      <li>Portabel ke berbagai sistem</li>
+      <li>Kotrol langsung ke memori</li>
+      <li>Komunitas luas dan dokumentasi langsung</li>
+    </ul>
+
+
+    <h3>Kesimpulan</h3>
+    <p>Bahasa C merupakan bahasa pemrograman yang kuat, efisien, dan fleksibel, cocok untuk pemula maupun profesional. Digunakan secara luas dalam pengembangan sistem, seperti sistem operasi, perangkat keras, dan pemrograman embedded. Memiliki kontrol langsung terhadap memori dan performa tinggi, menjadikannya dasar dari banyak bahasa modern seperti C++, Java, dan Python.</p>
+    </div>
+
+    <!--struktur-->
+    <div class="section-box" id="struktur">
+    <h2>Berikut struktur program C</h2>
+    <h2>1. Preprocessor Directive</h2>
+    <ul>
+        <li>Dimulai dengan #</li>
+        <li>Digunakan untuk menyertakan file header</li>
+        <li>Contoh : #include &lt;stdio.h&gt; (untuk fungsi input/output</li>
+    </ul>
+
+    <h3>2. Fungsi utama(main)</h3>
+    <ul>
+        <li>Titik awal eksekusi program</li>
+        <li>Wajib ada dalam setiap program C</li>
+        <li>Format : </li>
+        <pre><code>
+    int main() {
+    // kode program
+    return 0;
+}
+        </code></pre>
+    </ul>
+
+    <h3>3. Deklarasi variabel</h3>
+    <ul>
+        <li>Dilakukan sebelum digunakan</li>
+        <li>Contoh : </li>
+        <pre><code>
+    int a, b;
+    float c;
+        </code></pre>
+    </ul>
+    
+    <h3>4. Pernyataan / statement</h3>
+    <ul>
+        <li>Instruksi yang dijalankan oleh program</li>
+        <li>Diakhiri dengan titik koma (;)</li>
+        <li>Contoh: </li>
+        <pre><code>
+    printf("Halo Danu\n");
+    a = 10;
+        </code></pre>
+    </ul>
+
+    <h3>5. Komentar</h3>
+    <ul>
+        <li>Tidak dijalankan program, hanya penjelasan</li>
+        <li>Komentar satu baris : //</li>
+        <li>Komentar banyak baris: /*...*/</li>
+        <li>Contoh :</li>
+        <pre><code>
+    // Ini komentar satu baris
+    /* Ini komentar
+   lebih dari satu baris */
+        </code></pre>
+    </ul>
+    </div>
+
+<!--tipe data-->
+    <div class="section-box" id="tipedata">
+      <h2>1. Pengertian Variabel</h2>
+        <p>Variabel adalah tempat untuk menyimpan data di dalam program</p>
+        <p>contoh : </p>
+        <pre><code>int umur = 20;
+</code></pre>
+<ul>
+  <li>int : tipe data</li>
+  <li>umur : nama variabel</li>
+  <li>20 : nilai</li>
+</ul>     
+
+<h3>tipe data di C </h3>
+<li><code>int</code> bilangan  bulat</li>
+<li><code>float</code>bilangan desimal</li>
+<li><code>double</code>bilangan desimal (presisi tinggi)</li>
+<li><code>char</code>karakter tunggal</li>
+    </div>
+
+<!--operator-->
+    <div class="section-box" id="operator">
+      <h2>Apa itu Operator?</h2>
+    <p>Operator dalam bahasa C digunakan untuk melakukan operasi terhadap variabel dan nilai. Operator membantu dalam proses perhitungan, logika, dan manipulasi data.</p>
+
+    <h3>1. Operator Aritmatika</h3>
+    <ul>
+      <li><code>+</code> Penjumlahan</li>
+      <li><code>-</code> Pengurangan</li>
+      <li><code>*</code> Perkalian</li>
+      <li><code>/</code> Pembagian</li>
+      <li><code>%</code> Modulus (sisa bagi)</li>
+    </ul>
+  
+
+    <h3>2. Operator Perbandingan</h3>
+    <ul>
+      <li><code>==</code> Sama dengan</li>
+      <li><code>!=</code> Tidak sama dengan</li>
+      <li><code>&gt;</code> Lebih besar</li>
+      <li><code>&lt;</code> Lebih kecil</li>
+      <li><code>&gt;=</code> Lebih besar atau sama dengan</li>
+      <li><code>&lt;=</code> Lebih kecil atau sama dengan</li>
+    </ul>
+   
+    <h3>3. Operator Logika</h3>
+    <ul>
+      <li><code>&&</code> AND (dan)</li>
+      <li><code>||</code> OR (atau)</li>
+      <li><code>!</code> NOT (tidak)</li>
+    </ul>
+    
+
+    <h3>4. Operator Penugasan</h3>
+    <ul>
+      <li><code>=</code> Penugasan</li>
+      <li><code>+=</code> Tambah dan assign</li>
+      <li><code>-=</code> Kurang dan assign</li>
+      <li><code>*=</code> Kali dan assign</li>
+      <li><code>/=</code> Bagi dan assign</li>
+    </ul>
+  
+
+    <h3>5. Operator Increment & Decrement</h3>
+    <ul>
+      <li><code>++</code> Increment (tambah 1)</li>
+      <li><code>--</code> Decrement (kurang 1)</li>
+    </ul>
+    </div>
+
+<!--percabangan-->
+    <div class="section-box" id="percabangan">
+       <h2>Apa itu Percabangan?</h2>
+    <p>Percabangan dalam bahasa C digunakan untuk menentukan alur program berdasarkan kondisi tertentu. C menyediakan beberapa bentuk percabangan seperti <code>if</code>, <code>if else</code>, <code>else if</code>, dan <code>switch</code>.</p>
+
+    <h3>1. Percabangan if</h3>
+    <p>Digunakan untuk mengeksekusi pernyataan jika kondisi bernilai benar.</p>
+    <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+  int nilai = 75;
+  if (nilai >= 70) {
+    printf("Lulus\n");
+  }
+  return 0;
+}
+    </code></pre>
+
+    <h3>2. Percabangan if else</h3>
+    <p>Menambahkan alternatif jika kondisi bernilai salah.</p>
+    <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+  int nilai = 60;
+  if (nilai >= 70) {
+    printf("Lulus\n");
+  } else {
+    printf("Tidak Lulus\n");
+  }
+  return 0;
+}
+    </code></pre>
+
+    <h3>3. Percabangan else if</h3>
+    <p>Digunakan untuk beberapa kondisi berbeda.</p>
+    <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+  int nilai = 85;
+  if (nilai >= 90) {
+    printf("A\n");
+  } else if (nilai >= 80) {
+    printf("B\n");
+  } else if (nilai >= 70) {
+    printf("C\n");
+  } else {
+    printf("D\n");
+  }
+  return 0;
+}
+    </code></pre>
+
+    <h3>4. Percabangan switch</h3>
+    <p>Digunakan untuk memilih salah satu dari banyak pilihan nilai.</p>
+    <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+  int pilihan = 2;
+  switch(pilihan) {
+    case 1:
+      printf("Menu 1 dipilih\n");
+      break;
+    case 2:
+      printf("Menu 2 dipilih\n");
+      break;
+    case 3:
+      printf("Menu 3 dipilih\n");
+      break;
+    default:
+      printf("Pilihan tidak tersedia\n");
+  }
+  return 0;
+}
+    </code></pre>
+    </div>
+  </div>
+</body>
+</html>

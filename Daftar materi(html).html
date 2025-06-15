@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daftar Materi HTML</title>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+
+  html {
+    scroll-behavior: smooth;   /* semua anchor link akan scroll halus */
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f9fc;
+    color: #333;
+  }
+
+  header {
+    background: linear-gradient(45deg, rgba(255, 114, 49, 0.464), rgba(253, 254, 249, 0.437));
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.481);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .main-layout {
+    display: flex;
+    margin-top: 90px; /* beri ruang agar tidak tertutup header */
+  }
+
+  /* Sidebar */
+  .sidebar {
+    width: 220px;
+    background: linear-gradient(45deg, rgba(230, 138, 38, 0.464), rgba(249, 247, 247, 0.437));
+    color: white;
+    height: calc(100vh - 90px);
+    position: fixed;
+    top: 90px;
+    left: 0;
+    padding-top: 30px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.289);
+    padding-left: 10px;
+    overflow-y: auto;
+  }
+
+  .sidebar a {
+    display: flex;
+    justify-content: center;
+    background: rgba(229, 237, 243, 0.437);
+    width: 190px;
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.552);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 20px;
+    color: black;
+    text-decoration: none;
+  }
+
+  .sidebar a:hover {
+    background: #4A90E2;
+    color: white;
+    transform: scale(1.08);
+    transition: 0.3s ease;
+  }
+
+  .back-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    background-color: #4A90E2;
+    transition: background-color 0.3s ease;
+    max-width: fit-content;
+  }
+
+  .back-button:hover {
+    background-color: #357ABD;
+  }
+
+  .back-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Konten */
+  .content {
+    margin-top: 80px;
+    margin-left: 240px;  /* Lebih lebar dari sidebar supaya tidak tertutup */
+    padding: 40px;
+    max-width: calc(100% - 240px);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-box {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 30px;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 800px;
+  }
+
+  h1, h2 {
+    color: #2c3e50;
+  }
+
+  pre {
+    background-color: #eef1f6;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+  }
+
+  code {
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h2>Daftar Materi HTML</h2>
+  </header>
+
+  <div class="sidebar">
+    <a href="#pengantar">Pendahuluan</a>
+    <a href="#tag">Tag Dasar</a>
+    <a href="#struktur">Struktur HTML</a>
+    <a href="#format">Format Teks</a>
+    <a href="#link">Hyperlink</a>
+    <a href="#gambar">Gambar</a>
+    <a href="#penutup">Kesimpulan</a>
+
+     <div class="sidebar-footer" style="margin-top: 20px;">
+      <a href="Materi.html" class="back-button">
+        <img src="back-button.png" alt="kembali" class="back-icon">
+        <span>Kembali ke Halaman Utama</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="section-box" id="pengantar">
+      <h2>Pendahuluan</h2>
+      <p><strong>HTML</strong> adalah fondasi dasar dari setiap halaman web. Bahasa ini digunakan untuk menyusun teks, gambar, dan elemen lainnya di halaman web.</p>
+    </div>
+
+    <div class="section-box" id="tag">
+      <h2>Tag Dasar HTML</h2>
+      <p>Contoh tag penting:</p>
+      <ul>
+        <li><code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;body&gt;</code></li>
+        <li><code>&lt;h1&gt;</code> sampai <code>&lt;h6&gt;</code> untuk judul</li>
+        <li><code>&lt;p&gt;</code> untuk paragraf</li>
+        <li><code>&lt;br&gt;</code> dan <code>&lt;hr&gt;</code></li>
+      </ul>
+    </div>
+
+    <div class="section-box" id="struktur">
+      <h2>Struktur HTML</h2>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Judul Halaman&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Halo Dunia&lt;/h1&gt;
+    &lt;p&gt;Ini paragraf pertama.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+
+    <div class="section-box" id="format">
+      <h2>Format Teks</h2>
+      <p>Gunakan <code>&lt;strong&gt;</code> untuk teks tebal dan <code>&lt;em&gt;</code> untuk teks miring.</p>
+    </div>
+
+    <div class="section-box" id="link">
+      <h2>Hyperlink</h2>
+      <p>Contoh penggunaan tag link:</p>
+      <pre><code>&lt;a href="https://www.google.com"&gt;Kunjungi Google&lt;/a&gt;</code></pre>
+    </div>
+
+    <div class="section-box" id="gambar">
+      <h2>Menambahkan Gambar</h2>
+      <pre><code>&lt;img src="gambar.jpg" alt="Deskripsi Gambar" width="300"&gt;</code></pre>
+    </div>
+
+    <div class="section-box" id="penutup">
+      <h2>Kesimpulan</h2>
+      <p>HTML adalah bahasa dasar yang wajib dikuasai sebelum belajar CSS, JavaScript, atau framework web lainnya.</p>
+    </div>
+  </div>
+</body>
+</html>

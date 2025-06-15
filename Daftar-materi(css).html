@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daftar Materi HTML</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+
+  html {
+    scroll-behavior: smooth;   /* semua anchor link akan scroll halus */
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f9fc;
+    color: #333;
+  }
+
+  header {
+    background: linear-gradient(45deg, rgba(16, 95, 222, 0.464), rgba(246, 246, 244, 0.437));
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.481);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .main-layout {
+    display: flex;
+    margin-top: 90px; /* beri ruang agar tidak tertutup header */
+  }
+
+  /* Sidebar */
+  .sidebar {
+    width: 220px;
+    background: linear-gradient(45deg, rgba(22, 47, 173, 0.464), rgba(241, 241, 238, 0.437));
+    color: white;
+    height: calc(100vh - 90px);
+    position: fixed;
+    top: 90px;
+    left: 0;
+    padding-top: 30px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.289);
+    padding-left: 10px;
+    overflow-y: auto;
+  }
+
+  .sidebar a {
+    display: flex;
+    justify-content: center;
+    background: rgba(229, 237, 243, 0.437);
+    width: 190px;
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.552);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 20px;
+    color: black;
+    text-decoration: none;
+  }
+
+  .sidebar a:hover {
+    background: #4A90E2;
+    color: white;
+    transform: scale(1.08);
+    transition: 0.3s ease;
+  }
+
+  .back-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    background-color: #4A90E2;
+    transition: background-color 0.3s ease;
+    max-width: fit-content;
+  }
+
+  .back-button:hover {
+    background-color: #357ABD;
+  }
+
+  .back-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Konten */
+  .content {
+    margin-top: 80px;
+    margin-left: 240px;  /* Lebih lebar dari sidebar supaya tidak tertutup */
+    padding: 40px;
+    max-width: calc(100% - 240px);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-box {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 30px;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 800px;
+  }
+
+  h1, h2 {
+    color: #2c3e50;
+  }
+
+  pre {
+    background-color: #eef1f6;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+  }
+
+  code {
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h2>Daftar Materi CSS</h2>
+  </header>
+
+  <div class="sidebar">
+    <a href="#pengantar">Pendahuluan</a>
+    <a href="#menyisipkan">cara menyisipkan css</a>
+    <a href="#Selector">selector css</a>
+    <a href="#properti-umum">properti umum css</a>
+
+     <div class="sidebar-footer" style="margin-top: 20px;">
+      <a href="Materi.html" class="back-button">
+        <img src="back-button.png" alt="kembali" class="back-icon">
+        <span>Kembali ke Halaman Utama</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="section-box" id="pengantar">
+         <h2>Apa itu CSS?</h2>
+    <p>
+      CSS adalah singkatan dari <strong>Cascading Style Sheets</strong>. CSS digunakan untuk mengatur tampilan atau desain halaman website yang dibuat dengan HTML. CSS membantu memisahkan antara struktur dan presentasi.
+    </p>
+
+    <h3>Fungsi CSS</h3>
+    <ul>
+      <li>Mengatur warna, ukuran, dan posisi elemen HTML</li>
+      <li>Membuat layout yang responsif dan menarik</li>
+      <li>Mempermudah pemeliharaan tampilan website</li>
+      <li>Mempercepat proses styling dengan kode terstruktur</li>
+    </ul>
+
+    <h3>Kelebihan Menggunakan CSS</h3>
+    <ul>
+      <li>Mengurangi duplikasi kode desain</li>
+      <li>Memudahkan perubahan tampilan secara menyeluruh</li>
+      <li>Memisahkan konten dari tampilan (clean code)</li>
+    </ul>
+    </div>
+    <div class="section-box" id="menyisipkan">
+     <h2> Cara Menyisipkan CSS</h2>
+   
+    <h3>1. Inline CSS</h3>
+    <p>
+      CSS disisipkan langsung pada atribut HTML. Cocok untuk styling cepat, tapi tidak disarankan untuk proyek besar.
+    </p>
+    <pre>&lt;h1 style="color: red;"&gt;Judul Merah&lt;/h1&gt;</pre>
+
+    <h3>2. Internal CSS</h3>
+    <p>
+      CSS ditulis dalam tag <code>&lt;style&gt;</code> di bagian <code>&lt;head&gt;</code> HTML. Berguna untuk halaman tunggal.
+    </p>
+    <pre>
+&lt;head&gt;
+  &lt;style&gt;
+    h1 {
+      color: blue;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+    </pre>
+
+    <h3>3. Eksternal CSS</h3>
+    <p>
+      CSS ditulis di file terpisah (.css) dan dihubungkan ke HTML. Cara ini paling direkomendasikan untuk proyek besar.
+    </p>
+    <pre>
+/* style.css */
+body {
+  background-color: #f0f0f0;
+}
+    </pre>
+    <pre>
+&lt;head&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+    </pre>
+
+    </div>
+
+    <div class="section-box" id="Selector">
+         <h3>1. Selector Tag</h3>
+    <p>Memberi gaya berdasarkan nama tag HTML.</p>
+    <pre>
+h1 {
+  color: green;
+}
+    </pre>
+
+    <h3>2. Selector Kelas (Class)</h3>
+    <p>Gunakan titik (.) untuk memilih elemen dengan atribut <code>class</code>.</p>
+    <pre>
+.judul {
+  font-size: 24px;
+  color: blue;
+}
+    </pre>
+    <p>HTML:</p>
+    <pre>
+&lt;h2 class="judul"&gt;Ini Judul&lt;/h2&gt;
+    </pre>
+
+    <h3>3. Selector ID</h3>
+    <p>Gunakan tanda pagar (#) untuk memilih elemen dengan atribut <code>id</code>.</p>
+    <pre>
+#utama {
+  background-color: yellow;
+}
+    </pre>
+    <p>HTML:</p>
+    <pre>
+&lt;div id="utama"&gt;Konten utama&lt;/div&gt;
+    </pre>
+
+    <h3>4. Selector Universal</h3>
+    <p>Menerapkan gaya ke semua elemen.</p>
+    <pre>
+* {
+  margin: 0;
+  padding: 0;
+}
+    </pre>
+
+    <h3>5. Selector Gabungan</h3>
+    <p>Memilih beberapa elemen sekaligus.</p>
+    <pre>
+h1, h2, p {
+  font-family: 'Inter', sans-serif;
+}
+    </pre>
+
+    </div>
+
+    <div class="section-box" id="properti-umum">
+     <h2>Properti Umum CSS</h2>
+    <p>Mengatur tampilan elemen dengan berbagai properti CSS</p>
+
+    <h3>1. color</h3>
+    <p>Mengatur warna teks.</p>
+    <pre>
+p {
+  color: red;
+}
+    </pre>
+
+    <h3>2. background-color</h3>
+    <p>Memberi warna latar belakang pada elemen.</p>
+    <pre>
+div {
+  background-color: lightblue;
+}
+    </pre>
+
+    <h3>3. font-size</h3>
+    <p>Mengubah ukuran teks.</p>
+    <pre>
+h1 {
+  font-size: 32px;
+}
+    </pre>
+
+    <h3>4. text-align</h3>
+    <p>Mengatur perataan teks.</p>
+    <pre>
+p {
+  text-align: center;
+}
+    </pre>
+
+    <h3>5. margin & padding</h3>
+    <p>Mengatur jarak luar (margin) dan dalam (padding) elemen.</p>
+    <pre>
+div {
+  margin: 20px;
+  padding: 10px;
+}
+    </pre>
+
+    <h3>6. border</h3>
+    <p>Menambahkan garis tepi pada elemen.</p>
+    <pre>
+img {
+  border: 2px solid black;
+}
+    </pre>
+    </div>
+
+  </div>
+</body>
+</html>

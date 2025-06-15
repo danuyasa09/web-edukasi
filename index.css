@@ -52,26 +52,6 @@ nav ul li a:hover::after {
   background-color: #2fc1ff;
 }
 
- #webEdukasi{
-  background-image: url('bg.1.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
- #materi {
-  background-image: url('ChatGPT\ Image\ Jun\ 14\,\ 2025\,\ 07_52_22\ PM.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
- }
-
- #contact {
-  background-image: url('download (1).jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
- }
 
 .container {
   max-width: 900px;

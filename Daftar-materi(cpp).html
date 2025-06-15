@@ -8,130 +8,150 @@
   <style>
 
   html {
-    scroll-behavior: smooth;   /* semua anchor link akan scroll halus */
-  }
+      scroll-behavior: smooth;
+    }
 
-  body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f7f9fc;
-    color: #333;
-  }
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+      color: #e0e0e0;
+    }
 
-  header {
-    background: linear-gradient(45deg, rgba(32, 141, 224, 0.486), rgba(249, 249, 247, 0.437));
-    color: white;
-    padding: 1rem 2rem;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.481);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-  }
+    header {
+      background: #1e1e1e;
+      color: #ffffff;
+      padding: 1rem 2rem;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
 
-  .main-layout {
-    display: flex;
-    margin-top: 90px; /* beri ruang agar tidak tertutup header */
-  }
+    .main-layout {
+      display: flex;
+      margin-top: 90px;
+    }
 
-  /* Sidebar */
-  .sidebar {
-    width: 220px;
-    background: linear-gradient(45deg, rgba(78, 181, 212, 0.464), rgba(241, 241, 238, 0.437));
-    color: white;
-    height: calc(100vh - 90px);
-    position: fixed;
-    top: 90px;
-    left: 0;
-    padding-top: 30px;
-    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.289);
-    padding-left: 10px;
-    overflow-y: auto;
-  }
+    .sidebar {
+      width: 220px;
+      background: #1f1f1f;
+      color: white;
+      height: calc(100vh - 90px);
+      position: fixed;
+      top: 90px;
+      left: 0;
+      padding-top: 30px;
+      padding-left: 10px;
+      overflow-y: auto;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    }
 
-  .sidebar a {
-    display: flex;
-    justify-content: center;
-    background: rgba(229, 237, 243, 0.437);
-    width: 190px;
-    padding: 10px;
-    margin: 10px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.552);
-    transition: transform 0.3s ease-in-out;
-    border-radius: 20px;
-    color: black;
-    text-decoration: none;
-  }
+    .sidebar a {
+      display: block;
+      background: #2c2c2c;
+      color: #fff;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.3s;
+    }
 
-  .sidebar a:hover {
-    background: #4A90E2;
-    color: white;
-    transform: scale(1.08);
-    transition: 0.3s ease;
-  }
+    .sidebar a:hover {
+      background: #4A90E2;
+      transform: scale(1.05);
+    }
 
-  .back-button {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: white;
-    padding: 10px 16px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    background-color: #4A90E2;
-    transition: background-color 0.3s ease;
-    max-width: fit-content;
-  }
+    .back-button {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background-color: #4A90E2;
+      color: white;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+    }
 
-  .back-button:hover {
-    background-color: #357ABD;
-  }
+    .back-button:hover {
+      background-color: #357ABD;
+    }
 
-  .back-icon {
-    width: 20px;
-    height: 20px;
-  }
+    .back-icon {
+      width: 20px;
+      height: 20px;
+    }
 
-  /* Konten */
-  .content {
-    margin-top: 80px;
-    margin-left: 240px;  /* Lebih lebar dari sidebar supaya tidak tertutup */
-    padding: 40px;
-    max-width: calc(100% - 240px);
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+    .content {
+      margin-top: 90px;
+      margin-left: 240px;
+      padding: 40px;
+      max-width: calc(100% - 240px);
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-  .section-box {
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    padding: 30px;
-    margin-bottom: 40px;
-    width: 100%;
-    max-width: 800px;
-  }
+    .section-box {
+      background-color: #1e1e1e;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+      padding: 30px;
+      margin-bottom: 40px;
+      width: 100%;
+      max-width: 800px;
+    }
 
-  h1, h2 {
-    color: #2c3e50;
-  }
+    h1, h2, h3 {
+      color: #ffffff;
+    }
 
-  pre {
-    background-color: #eef1f6;
-    padding: 15px;
-    border-radius: 8px;
-    overflow-x: auto;
-  }
+    pre {
+      background-color: #2a2a2a;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      color: #c7f3ff;
+    }
 
-  code {
-    font-family: 'Courier New', Courier, monospace;
-  }
+    code {
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    /* Responsiveness */
+    @media (max-width: 768px) {
+      .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        box-shadow: none;
+        background: #1e1e1e;
+        padding: 10px;
+      }
+
+      .sidebar a, .back-button {
+        width: auto;
+        margin: 5px;
+      }
+
+      .content {
+        margin: 0;
+        padding: 20px;
+        max-width: 100%;
+      }
+    }
+
 
   </style>
 </head>
@@ -149,7 +169,7 @@
     <a href="#percabangan">Percabangan</a>
 
     <div class="sidebar-footer" style="margin-top: 20px;">
-      <a href="fix-projek.html" class="back-button">
+      <a href="index.html" class="back-button">
         <img src="back-button.png" alt="kembali" class="back-icon">
         <span>Kembali ke Halaman Utama</span>
       </a>
